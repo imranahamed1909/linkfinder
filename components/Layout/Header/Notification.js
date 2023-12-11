@@ -42,10 +42,13 @@ function Notification() {
     requestNotificationPermission();
 
     if (adminId) {
-      const pusher = new Pusher("ff0fc3f0096af6ab8a90", {
-        cluster: "ap2",
-        encrypted: true,
-      });
+      const pusher = new Pusher(
+        "1566e3b3df0452142fc3", // APP_KEY
+        {
+          cluster: "ap2",
+          encrypted: true,
+        }
+      );
 
       const channel = pusher.subscribe(adminId);
       channel.bind("new-notification", (data) => {
