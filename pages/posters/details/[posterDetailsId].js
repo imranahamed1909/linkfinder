@@ -17,6 +17,7 @@ function PosterDetailsPage() {
     : "";
 
   console.log("poster data", data);
+  // console.log("poster id", posterId);
 
   return (
     <div className="relative">
