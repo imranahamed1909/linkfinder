@@ -123,15 +123,16 @@ export const collectionColumn = [
   //     return format(new Date(value), "dd/MM/yyyy");
   //   },
   // },
-  {
-    Header: "Option",
-    accessor: "_id",
-    disableSortBy: true,
-    width: 200,
-    Cell: ({ row }) => (
-      <div className="flex justify-center items-center gap-2">
-        <DeleteCollection collectionInfo={row.original} />
-      </div>
-    ),
-  },
+
+  // {
+  //   Header: "Option",
+  //   accessor: "_id",
+  //   disableSortBy: true,
+  //   width: 200,
+  //   Cell: ({ row }) => (
+  //     <div className="flex justify-center items-center gap-2">
+  //       <DeleteCollection collectionInfo={row.original} />
+  //     </div>
+  //   ),
+  // },
 ];
