@@ -77,6 +77,13 @@ function Posterspage() {
   );
 }
 
+const user = { user1: "123", user2: 233 };
+const posters = [{ name: "poster1" }, { name: "poster2" }];
+
+const z = { ...user, posters };
+
+console.log("z", z);
+
 // export async function getServerSideProps(context) {
 //   // const {
 //   //   user: { username, id, admin },
