@@ -22,6 +22,9 @@ function QRCodepage() {
   const apiLink = admin ? `/all/poster/${id}` : `/link/get/${id}/${isAdmin}`;
   const { data: fetchedData2, isLoading: isLoading2 } = useGetData(apiLink);
 
+ 
+  console.log("qrcode", fetchedData2?.data);
+
   // console.log("qrcode", qrCode);
 
   const { Image } = useQRCode();
