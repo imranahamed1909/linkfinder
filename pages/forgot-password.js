@@ -20,9 +20,6 @@ function ForgotPasswordPage() {
     // password: "",
   };
 
-  const { mutate: phoneMutate, isLoading: phoneIsLoading } = usePasswordReset({
-    path: "/change/password",
-  });
   // const { mutate: phoneMutate, isLoading: phoneIsLoading } = usePasswordReset({
   //   path: "/change/password/otp/once",
   // });
@@ -31,10 +28,10 @@ function ForgotPasswordPage() {
   //   path: "/user/check/otp",
   // });
 
-  // const { mutate: passwordMutate, isLoading: passwordIsLoading } =
-  //   usePasswordReset({
-  //     path: "/change/password",
-  //   });
+  const { mutate: passwordMutate, isLoading: passwordIsLoading } =
+    usePasswordReset({
+      path: "/change/password",
+    });
 
   const handleSubmit = (values, formik) => {
     if (step === 1) {
@@ -42,14 +39,14 @@ function ForgotPasswordPage() {
         username: values.username,
         newPassword: values.newPassword,
       };
-      // console.log("step 1 values", values1);
+      console.log("step 1 values", values1);
 
       // phoneMutate(values1, {
       //   onSuccess: () => {
       //     setStep(2);
       //   },
       // });
-      phoneMutate(values1,{
+      passwordMutate(values1,{
         onSuccess: () => {
           formik.resetForm();
           router.push("/sign-in");
@@ -107,7 +104,7 @@ function ForgotPasswordPage() {
                   <div className="text-sm gap-y-5 md:gap-y-7">
                     <div className="min-w-[300px] max-w-[320px] lg:w-[350px] space-y-4">
                       {step === 1 && (
-                        <PhoneNumberForm isLoading={phoneIsLoading} />
+                        <PhoneNumberForm isLoading={passwordIsLoading} />
                       )}
                       {/* {step === 2 && (
                         <OtpForm
