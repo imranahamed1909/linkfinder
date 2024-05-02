@@ -64,7 +64,7 @@ function ForgotPasswordPage() {
         username: values.username,
         email: values.email,
       };
-      // console.log("step 1 values", values1);
+      console.log("step 1 values", values1);
 
       emailMutate(values1, {
         onSuccess: () => {
