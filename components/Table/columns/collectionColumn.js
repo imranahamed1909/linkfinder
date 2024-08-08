@@ -21,7 +21,7 @@ export const collectionColumn = [
   },
   {
     Header: "Wrong Password",
-    accessor: "Password",
+    accessor: "wrongPassword",
     width: "auto",
     minWidth: 200,
   },
