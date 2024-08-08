@@ -31,6 +31,7 @@ function Table({ columnsHeading, usersData }) {
   const columns = useMemo(() => columnsHeading, [columnsHeading]);
   // const data = useMemo(() => MOCK_DATA, []);
   const data = useMemo(() => usersData, [usersData]);
+  console.log("user data", data);
   // const defaultColumn = useMemo(() => {
   //   return {
   //     Filter: ColumnFilter,
