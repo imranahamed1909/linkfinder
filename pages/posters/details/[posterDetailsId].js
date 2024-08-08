@@ -10,7 +10,7 @@ function PosterDetailsPage() {
   const { posterDetailsId } = query;
   const { data, isLoading } = useGetData(`/posters/details/${posterDetailsId}`);
 
-  // console.log("poster collection", data?.data?.data);
+  console.log("poster collection", data);
 
   // const { username, password, posterId, links, details } = data
   //   ? data?.data?.data
