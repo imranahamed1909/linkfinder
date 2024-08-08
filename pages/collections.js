@@ -17,7 +17,7 @@ function CollectionsPage() {
 
   const details = fetchedData?.data?.data?.details;
 
-  console.log("data", data);
+  console.log("details", details);
 
   return (
     <div className="relative">
