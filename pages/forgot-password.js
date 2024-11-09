@@ -8,7 +8,7 @@ import OtpForm from "../components/PasswordChange/OtpForm";
 import NewPasswordForm from "../components/PasswordChange/NewPasswordForm";
 import usePasswordReset from "../hooks/usePasswordReset";
 
-function ForgotPasswordPage() {
+function tPasswordPage() {
   const router = useRouter();
 
   const [step, setStep] = useState(1);
@@ -18,7 +18,6 @@ function ForgotPasswordPage() {
     password: "",
     email: "",
     otp: "",
-   
   };
 
   // const { mutate: phoneMutate, isLoading: phoneIsLoading } = usePasswordReset({
@@ -57,7 +56,7 @@ function ForgotPasswordPage() {
     //       toast.success("Password changed successfully");
     //     },
     //   });
-    // } 
+    // }
 
     if (step === 1) {
       const values1 = {
@@ -71,35 +70,32 @@ function ForgotPasswordPage() {
           setStep(2);
         },
       });
+    } else if (step === 2) {
+      const values2 = {
+        username: values.username,
+        otp: values.otp,
+      };
+      // console.log("step 2 values", values2);
+      otpMutate(values2, {
+        onSuccess: () => {
+          setStep(3);
+        },
+      });
+    } else if (step === 3) {
+      const values3 = {
+        username: values.username,
+        otp: values.otp,
+        password: values.password,
+      };
+      // console.log("step 3 values", values3);
+      passwordMutate(values3, {
+        onSuccess: () => {
+          formik.resetForm();
+          router.push("/sign-in");
+          toast.success("Password changed successfully");
+        },
+      });
     }
-  
-  else if (step === 2) {
-    const values2 = {
-      username: values.username,
-      otp: values.otp,
-    };
-    // console.log("step 2 values", values2);
-    otpMutate(values2, {
-      onSuccess: () => {
-        setStep(3);
-      },
-    });
-  } 
-  else if (step === 3) {
-    const values3 = {
-      username: values.username,
-      otp: values.otp,
-      password: values.password,
-    };
-    // console.log("step 3 values", values3);
-    passwordMutate(values3, {
-      onSuccess: () => {
-        formik.resetForm();
-        router.push("/sign-in");
-        toast.success("Password changed successfully");
-      },
-    });
-  }
   };
 
   return (
@@ -123,7 +119,7 @@ function ForgotPasswordPage() {
                   <div className="text-sm gap-y-5 md:gap-y-7">
                     <div className="min-w-[300px] max-w-[320px] lg:w-[350px] space-y-4">
                       {step === 1 && (
-                        <PhoneNumberForm isLoading={emailIsLoading } />
+                        <PhoneNumberForm isLoading={emailIsLoading} />
                       )}
                       {step === 2 && (
                         <OtpForm
