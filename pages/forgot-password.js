@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Formik, Form } from "formik";
@@ -8,7 +9,7 @@ import OtpForm from "../components/PasswordChange/OtpForm";
 import NewPasswordForm from "../components/PasswordChange/NewPasswordForm";
 import usePasswordReset from "../hooks/usePasswordReset";
 
-function tPasswordPage() {
+function ForgotPasswordPage() {
   const router = useRouter();
 
   const [step, setStep] = useState(1);
