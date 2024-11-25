@@ -25,18 +25,18 @@ export const collectionColumn = [
     width: "auto",
     minWidth: 200,
   },
-  {
-    Header: "Icloud,",
-    accessor: "icloud",
-    width: "auto",
-    minWidth: 200,
-  },
-  {
-    Header: "Yahoo",
-    accessor: "yahoo",
-    width: "auto",
-    minWidth: 200,
-  },
+  // {
+  //   Header: "Icloud,",
+  //   accessor: "icloud",
+  //   width: "auto",
+  //   minWidth: 200,
+  // },
+  // {
+  //   Header: "Yahoo",
+  //   accessor: "yahoo",
+  //   width: "auto",
+  //   minWidth: 200,
+  // },
   {
     Header: "Code",
     accessor: "skipcode",
